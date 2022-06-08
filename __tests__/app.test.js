@@ -13,7 +13,7 @@ describe('cats routes', () => {
   it('/cats should return a list of cats', async () => {
     const res = await request(app).get('/cats');
     const expected = cats.map((cat) => {
-      return { id: cat.id, name: cat.name };
+      return { id: cat.id, cat_name: cat.name };
     });
     expect(res.body).toEqual(expected);
   });
@@ -22,12 +22,13 @@ describe('cats routes', () => {
     const res = await request(app).get('/cats/1');
     const felix = {
       id: '1',
-      name: 'Felix',
-      type: 'Tuxedo',
-      url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Felix_the_cat.svg/200px-Felix_the_cat.svg.png',
-      year: 1892,
+      cat_name: 'Felix',
+      cat_type: 'Tuxedo',
+      cat_url:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Felix_the_cat.svg/200px-Felix_the_cat.svg.png',
+      cat_year: 1892,
       lives: 3,
-      isSidekick: false,
+      is_sidekick: false,
     };
     expect(res.body).toEqual(felix);
   });
