@@ -12,11 +12,11 @@ cat_type VARCHAR NOT NULL,
 cat_url VARCHAR NOT NULL,
 cat_year INT NOT NULL,
 lives INT NOT NULL,
-isSidekick BOOLEAN NOT NULL
+is_sidekick BOOLEAN NOT NULL
 );
 
 
-INSERT INTO cats (cat_name, cat_type, cat_url, cat_year,lives, isSidekick ) VALUES 
+INSERT INTO cats (cat_name, cat_type, cat_url, cat_year,lives, is_sidekick ) VALUES 
 ('Felix', 'Tuxedo', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Felix_the_cat.svg/200px-Felix_the_cat.svg.png', 1892, 3, false ), ('Garfield', 'Orange Tabby', 'https://static.wikia.nocookie.net/garfield/images/9/9f/GarfieldCharacter.jpg', 1978, 7, false), 
 ('Duchess', 'Angora', 'https://static.wikia.nocookie.net/disney/images/e/eb/Profile_-_Duchess.jpeg', 1970, 9, false),
  ('Stimpy', 'Manx', 'https://static.wikia.nocookie.net/renandstimpy/images/c/c1/Ren-stimpy-25-anniversar-hp2.png', 1990, 1, true),
